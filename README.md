@@ -8,8 +8,9 @@ includes
 * koa-logger
 * koa-bodyparser
 * koa-router which you can use with `app.get('/', function *(next){})`
-* smart response type setting for json
-* debug statements with app.debug()
+* smart response content types
+* debug statements with `app.debug('💯')`
+* static with `app.static(root, opts)`
 
 usage
 ```js

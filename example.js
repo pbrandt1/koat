@@ -1,4 +1,4 @@
-var app = require('../index.js');
+var app = require('./index.js');
 
 
 app.use('/', function *(next) {
@@ -23,6 +23,8 @@ app.get('/:something', function *() {
 app.get('/data', function *() {
   this.body = {a: 12}
 })
+
+app.static('.')
 
 app.listen(3000);
 console.log('listening on 3000')

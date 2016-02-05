@@ -29,6 +29,12 @@ app.use = function(route, middleware) {
   router.use(route, middleware);
 }
 
+// static file support
+var static = require('koa-static')
+app.static = function(root, opts) {
+  app.use(static(root, opts))
+}
+
 // add shortcuts for the methods right into app
 var methods = ['get', 'post', 'put', 'delete']
 methods.map(function(method) {
